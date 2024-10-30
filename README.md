@@ -1,24 +1,14 @@
-# Surikata3k Code Sharing Project
+# Project README
 
-Welcome to the **Surikata3k Code Sharing Project**! 🎉
+This project provides examples of various configurations and code snippets.
 
-This repository is designed as a space for **students** and **developers** to access and share **code snippets** and resources that are useful for learning and development. Whether you're learning to code, need to reference specific programming concepts, or just want to share and collaborate on snippets, this project is here to help!
+## Files
 
-## 📚 What You'll Find Here
-- **Code snippets**: Useful pieces of code for common tasks across different programming languages.
-- **Project examples**: Real-world examples of how to apply coding concepts.
-- **Learning resources**: Links to tutorials, articles, and documentation.
+1. **java_sha1.md**: Java code to generate SHA-1 hash of a given input.
+2. **netplan_static_ip.md**: YAML configuration to set a static IP on Ubuntu using Netplan.
+3. **oracle_sql_autoincrement.md**: SQL commands for creating an auto-incrementing ID in Oracle SQL.
+4. **oracle_tips.md**: Helpful Oracle SQL tips and commands.
+5. **ubuntu_install_samba.md**: Script for installing and setting up Samba on Ubuntu.
 
-## 🎯 Purpose
-The goal of this project is to:
-1. **Share code snippets** with students to help them learn faster.
-2. Provide a **central place to store and organize** code for future use.
-3. Encourage **collaboration and learning** within the development community.
-
-## 🚀 How to Use
-- Browse through the repository to find helpful snippets.
-- Use the code in your own projects or for learning purposes.
-- Feel free to **contribute** your own code snippets by opening a pull request!
-
-## 🧑‍🏫 For Students
-This platform is a great way to **access resources** that will help you understand coding concepts and build your own projects. You can bookmark this page or clone the repository to have a local version of the code on your machine.
+Refer to each file's content for more details.
+    
