@@ -28,8 +28,11 @@ $sudo nano /etc/samba/smb.conf
 ```
 
 $sudo service smbd restart
+
 $sudo ufw allow samba
+
 $sudo smbpasswd -a user
+
 $\\IP\public
 
 
