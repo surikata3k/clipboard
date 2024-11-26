@@ -18,5 +18,7 @@ $alumnes | foreach {Add-Member -InputObject $_ -MemberType NoteProperty -Name 'S
 
 Get-Content "C:\start.csv" | select -First 10 | Out-File "C:\stop.csv"
 
+Test-NetConnection rpc.acronis.com -Port 443
+
 ```
 
