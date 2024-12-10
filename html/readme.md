@@ -31,3 +31,14 @@
 <meta name="description" content="The MDN Web Docs Learning Area aims to provide complete beginners to the Web with all they need to know to get started with developing websites and applications." />
 ```
 
+### Links
+```
+<link rel="icon" href="favicon.ico" type="image/x-icon" />
+<link rel="stylesheet" href="my-css-file.css" />
+<script src="my-js-file.js" defer></script>
+```
+
+
+
+
+
