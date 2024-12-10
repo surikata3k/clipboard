@@ -15,3 +15,19 @@
   </body>
 </html>
 ```
+
+### Literal character	Character reference equivalent
+```
+<	&lt;
+>	&gt;
+"	&quot;
+'	&apos;
+&	&amp;
+```
+
+### Meta
+```
+<meta name="author" content="Chris Mills" />
+<meta name="description" content="The MDN Web Docs Learning Area aims to provide complete beginners to the Web with all they need to know to get started with developing websites and applications." />
+```
+
