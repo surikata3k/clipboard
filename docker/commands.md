@@ -1,3 +1,4 @@
+## Basic
 Dockerfile
 ```
 # syntax=docker/dockerfile:1
@@ -61,4 +62,14 @@ Mount volume
 docker run -dp 127.0.0.1:3000:3000 --mount type=volume,src=todo-db,target=/etc/todos getting-started
 ```
 
+## Bind mounts
+Linux
+```
+docker run -it --mount type=bind,src="$(pwd)",target=/src ubuntu bash
+```
+
+Powershell
+```
+docker run -it --mount "type=bind,src=$($pwd),target=/src" ubuntu bash
+```
 
