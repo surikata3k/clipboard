@@ -49,3 +49,16 @@ Docker run you image
 ```
 docker run -dp 0.0.0.0:3000:3000 YOUR-USER-NAME/getting-started
 ```
+
+## Volume
+Create a volume
+```
+docker volume create todo-db
+```
+
+Mount volume
+```
+docker run -dp 127.0.0.1:3000:3000 --mount type=volume,src=todo-db,target=/etc/todos getting-started
+```
+
+
