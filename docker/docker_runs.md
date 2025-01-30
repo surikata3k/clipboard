@@ -1,16 +1,25 @@
 ### Mysql
 ```
- docker run -d -p 33060:3306 --name mysql-db  -e MYSQL_ROOT_PASSWORD=123456 --mount src=mysql-db-data,dst=/var/lib/mysql mysql
+ docker run -d -p 3306:3306 --name mysql-db  -e MYSQL_ROOT_PASSWORD=123456 -v mysqldata:/var/lib/mysql mysql
 ```
 
 ### Oracle
+(username: sys)
 ```
-docker run --name oracle -p 1521:1521 -e ORACLE_PWD=123456 -v /opt/oracle/oradata:/opt/oracle/oradata container-registry.oracle.com/database/free:latest
+docker run --name oracle -p 1521:1521 -e ORACLE_PWD=123456 -v oracledb:/opt/oracle/oradata container-registry.oracle.com/database/free:latest
+```
+```
+GRANT CREATE SESSION TO user_name;
 ```
 
 ### Postgres
 ```
-docker run -p 5432:5432 -e POSTGRES_USER=postgres -e POSTGRES_PASSWORD=123456 -e POSTGRES_DB=postgres -d postgres
+docker run -p 5432:5432 -e POSTGRES_USER=postgres -e POSTGRES_PASSWORD=123456 -e POSTGRES_DB=postgres -v pgdata:/var/lib/postgresql/data -d postgres
+```
+
+### Sql Server
+```
+docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=Password_123#" -p 1433:1433 -v sqlvolume:/var/opt/mssql --name sql_server_container -d mcr.microsoft.com/mssql/server
 ```
 
 ### Jenkins
