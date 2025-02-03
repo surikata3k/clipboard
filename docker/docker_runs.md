@@ -22,6 +22,11 @@ docker run -p 5432:5432 -e POSTGRES_USER=postgres -e POSTGRES_PASSWORD=123456 -e
 docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=Password_123#" -p 1433:1433 -v sqlvolume:/var/opt/mssql --name sql_server_container -d mcr.microsoft.com/mssql/server
 ```
 
+### Mongodb
+```
+docker run --name mongodb -d -p 27017:27017 -v mongodbdata:/data/db mongodb/mongodb-community-server:latest
+```
+
 ### Jenkins
 ```
 docker run -p 8080:8080 -p 50000:50000 --restart=on-failure -v jenkins_home:/var/jenkins_home jenkins/jenkins:lts-jdk17
