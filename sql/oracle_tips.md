@@ -1,15 +1,15 @@
-## Connect to sqlplus and open connection
+### Connect to sqlplus and open connection
 ````
 sql>connect / as sysdba
 sql> show con_name
 ````
   
-## Oracle change password
+### Oracle change password
 ````
 sql> ALTER USER usuari IDENTIFIED BY currentPassword REPLACE newPassword;
 ````
 
-## New oracle user
+### New oracle user
 Open SQLPlus
   
 ````

@@ -1,197 +1,156 @@
-A continuació, et presento una sèrie d'exercicis progressius per practicar les propietats de posicionament en CSS amb divs. Aquests exercicis et permetran comprendre millor position: static, position: relative, position: absolute, position: fixed i position: sticky, així com la interacció amb top, right, bottom, left i z-index.
+# Aquí tens una explicació dels blocs de construcció CSS i alguns exemples pràctics:
 
-## Exercici 1: Posicionament estàtic (Static)
+## Explicació dels blocs de construcció CSS
 
-Objectiu: Entendre el comportament per defecte dels elements.
-HTML:
+CSS (Cascading Style Sheets - Fulls d'Estil en Cascada) és un llenguatge que s'utilitza per descriure la presentació d'un document escrit en un llenguatge de marques com HTML. 
+Els "blocs de construcció" de CSS són els conceptes fonamentals que permeten controlar l'aparença dels elements a la pàgina web. Aquí teniu alguns dels més importants:
 
-```html
-<div class="contenidor">
-  <div class="element estatic">Element estàtic 1</div>
-  <div class="element estatic">Element estàtic 2</div>
-</div>
-```
+### Selectors: Els selectors CSS permeten seleccionar els elements HTML als quals s'aplicaran els estils. Hi ha diversos tipus de selectors:
 
-CSS:
-  
-```css
-.contenidor {
-  width: 300px;
-  border: 1px solid black;
-  padding: 10px;
-}
+- Selectors d'element (o tipus): Seleccionen tots els elements d'un tipus determinat (p. ex., p per a paràgrafs, h1 per a encapçalaments).
+- Selectors de classe: Seleccionen elements amb un atribut de classe específic (p. ex., .important).
+- Selectors d'ID: Seleccionen un element amb un atribut ID únic (p. ex., #capçalera).
+- Selectors d'atribut: Seleccionen elements basant-se en la presència o valor d'un atribut (p. ex., [title]).
+- Pseudo-classes: Seleccionen elements en un estat determinat (p. ex., :hover quan el ratolí està a sobre).
+- Pseudo-elements: Seleccionen parts específiques d'un element (p. ex., ::first-line per a la primera línia d'un text).
+- Combinadors: Permeten combinar selectors per a una selecció més precisa (p. ex., div p selecciona tots els paràgrafs dins d'un div).
+- Propietats i valors: Les propietats CSS defineixen l'aspecte que es vol canviar (p. ex., color, font-size, margin). Cada propietat té un valor que especifica com es vol canviar l'aspecte (p. ex., red, 16px, 10px).
 
-.element {
-  padding: 10px;
-  margin-bottom: 5px;
-  background-color: lightgray;
-}
+### Model de caixa (Box Model): Cada element HTML es representa com una caixa rectangular. Aquesta caixa consta de:
 
-.estatic {
-  position: static; /* Per defecte, no cal especificar */
-}
-```
+- Contingut (content): El text o la imatge dins de l'element.
+- Padding (farciment): L'espai entre el contingut i la vora.
+- Vora (border): La línia que envolta el padding i el contingut.
+- Marge (margin): L'espai entre la vora i els elements adjacents.
+- Cascada i herència: La cascada defineix com s'apliquen els estils quan hi ha conflictes (diferents regles que afecten el mateix element). L'herència permet que alguns estils s'heretin dels elements pare als elements fill.
 
-### Tasques:
-- Observa com els elements es disposen verticalment un darrere l'altre, seguint el flux normal del document.
-- Intenta aplicar top, right, bottom o left a .estatic. Veureu que no tenen cap efecte.
-  
-## Exercici 2: Posicionament relatiu (Relative)
+## Exercicis pràctics
 
-Objectiu: Desplaçar un element respecte a la seva posició original.
-HTML: (El mateix que l'exercici 1)
-CSS:
-  
-```CSS
-/* ... (CSS de l'exercici 1) */
-.relatiu {
-  position: relative;
-  top: 20px;
-  left: 30px;
-  background-color: lightblue;
-}
-```
+Aquí teniu alguns exercicis pràctics per aplicar aquests conceptes. 
+Recomano crear un fitxer HTML (index.html) i un fitxer CSS (styles.css) i enllaçar-los.
 
-### Tasques:
-- Afegeix la classe relatiu al segon div.
-- Observa com l'element es desplaça 20px cap avall i 30px a la dreta respecte a la seva posició original.
-- Nota que l'espai que ocupava originalment l'element es manté reservat.
-
-## Exercici 3: Posicionament absolut (Absolute)
-
-Objectiu: Treure un element del flux del document i posicionar-lo respecte al seu ancestre posicionat més proper.
-HTML:
-  
-```HTML
-<div class="contenidor posicio-relativa">
-  <div class="element">Element 1</div>
-  <div class="element absolut">Element absolut</div>
-</div>
-```
-
-CSS:
-
-```CSS
-/* ... (CSS bàsic) */
-.posicio-relativa {
-  position: relative; /* Important per a l'absolut */
-  height: 200px; /* Per visualitzar millor l'efecte */
-}
-
-.absolut {
-  position: absolute;
-  top: 50px;
-  right: 10px;
-  background-color: lightcoral;
-}
-```
-
-### Tasques:
-- Afegeix la classe absolut al segon div.
-- Observa com l'element es posiciona respecte al contenidor (.contenidor), ja que té position: relative.
-- Prova a treure position: relative de .contenidor. L'element absolut es posicionarà respecte al body.
-
-
-## Exercici 4: Superposició amb z-index
-
-Objectiu: Controlar l'ordre de superposició dels elements.
-HTML:
+### Exercici 1: Selectors bàsics
 
 ```HTML
-
-<div class="contenidor posicio-relativa">
-  <div class="element absolut z1">Element absolut 1 (z-index: 1)</div>
-  <div class="element absolut z2">Element absolut 2 (z-index: 2)</div>
-</div>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exercici 1</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Títol principal</h1>
+    <p class="important">Aquest és un paràgraf important.</p>
+    <p id="paragraf2">Aquest és un altre paràgraf.</p>
+    <ul>
+        <li>Element 1</li>
+        <li>Element 2</li>
+    </ul>
+</body>
+</html>
 ```
 
-CSS:
-  
 ```CSS
-
-/* ... (CSS anterior) */
-.z1 {
-  z-index: 1;
-  background-color: lightgreen;
-  top: 20px;
-  left: 20px;
+/* styles.css */
+h1 {
+    color: blue;
+    text-align: center;
 }
 
-.z2 {
-  z-index: 2;
-  background-color: lightyellow;
-  top: 40px;
-  left: 40px;
+.important {
+    font-weight: bold;
+    color: red;
+}
+
+#paragraf2 {
+    font-style: italic;
+}
+
+ul li {
+    list-style-type: circle;
 }
 ```
 
-### Tasques:
-- Observa com l'element amb z-index: 2 se superposa a l'element amb z-index: 1.
-- Prova a canviar els valors de z-index.
-
-## Exercici 5: Posicionament fix (Fixed)
-
-Objectiu: Mantenir un element en una posició fixa a la finestra del navegador, fins i tot quan es fa scroll.
-HTML:
+### Exercici 2: Model de caixa
 
 ```HTML
-<div class="fixe">Element fix</div>
-<div class="contingut-llarg">
-  <p>Molt de text...</p>
-  </div>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exercici 2</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="box">Aquesta és una caixa.</div>
+</body>
+</html>
 ```
 
-CSS:
 ```CSS
 
-.fixe {
-  position: fixed;
-  top: 10px;
-  right: 10px;
-  background-color: lightpink;
-  padding: 10px;
-}
-
-.contingut-llarg {
-  height: 2000px; /* Força el scroll */
+/* styles.css */
+.box {
+    width: 200px;
+    height: 100px;
+    background-color: lightgray;
+    padding: 20px;
+    border: 5px solid black;
+    margin: 30px;
 }
 ```
 
-### Tasques:
-Fes scroll a la pàgina. Observa com l'element amb position: fixed es manté en la mateixa posició.
-
-## Exercici 6: Posicionament enganxós (Sticky)
-
-Objectiu: Combinar comportament relatiu i fix. L'element es comporta com a relatiu fins que se supera un cert punt de scroll, moment en què es converteix en fix.
-HTML:
+### Exercici 3: Pseudo-classes
 
 ```HTML
-<div class="enganxos">Element enganxós</div>
-<div class="contingut-llarg">
-  <p>Molt de text...</p>
-  </div>
-```
-  
-CSS:
-
-```css
-.enganxos {
-  position: sticky;
-  top: 0; /* Punt on es "enganxa" */
-  background-color: lightseagreen;
-  padding: 10px;
-}
-
-.contingut-llarg {
-  height: 2000px; /* Força el scroll */
-}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exercici 3</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <a href="#">Enllaç</a>
+</body>
+</html>
 ```
 
-### Tasques:
-- Fes scroll a la pàgina. Observa com l'element es manté en el flux normal fins que arriba a la part superior de la finestra, moment en què es "enganxa" i es comporta com a fix.
-- Aquests exercicis et proporcionen una base sòlida per comprendre el posicionament en CSS. Experimenta amb diferents valors i combina les propietats per aconseguir els resultats desitjats. Recorda que la pràctica constant és clau per dominar aquests conceptes.
+```CSS
+/* styles.css */
+a {
+    color: blue;
+    text-decoration: none;
+}
 
+a:hover {
+    color: red;
+    text-decoration: underline;
+}
+```
 
+### Exercici 4: Combinadors
 
+```HTML
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exercici 4</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div>
+        <p>Paràgraf dins d'un div.</p>
+        <span><p>Paràgraf dins d'un span dins d'un div.</p></span>
+    </div>
+    <p>Paràgraf fora del div.</p>
+</body>
+</html>
+```
 
+```CSS
+/* styles.css */
+div p {
+    color: green;
+}
+```
 
+Aquests exercicis us ajudaran a comprendre millor els blocs de construcció CSS. Experimenteu amb diferents valors i propietats per veure'n els efectes. A mesura que avanceu, podeu explorar conceptes més avançats com Flexbox i Grid per a dissenys més complexos.
