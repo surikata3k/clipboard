@@ -3,3 +3,8 @@
 ```
 docker-compose up -d
 ```
+
+### Open bash in php-fpm container
+```
+docker-compose exec php-fpm bash
+```
