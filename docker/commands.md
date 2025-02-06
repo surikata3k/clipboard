@@ -94,3 +94,10 @@ Connect
 docker exec -it <mysql-container-id> mysql -u root -p
 ```
 
+## Docker-compose
+```
+docker-compose up 
+```
+```
+docker-compose -f config_file.yml up 
+```
