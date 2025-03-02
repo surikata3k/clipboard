@@ -36,4 +36,8 @@ $sudo smbpasswd -a user
 $\\IP\public
 
 
+### Text editor from terminal
+```
+xed
+```
 
