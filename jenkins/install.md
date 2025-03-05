@@ -20,4 +20,6 @@ sudo apt-get update
 sudo apt-get install jenkins
 ```
 
-Access to (http://127.0.0.1:8080)[http://127.0.0.1:8080]
+Access to [http://127.0.0.1:8080](http://127.0.0.1:8080)
+
+
