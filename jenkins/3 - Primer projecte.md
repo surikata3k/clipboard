@@ -25,4 +25,7 @@ Quan estigui tot configurat proba d'executar la tasca.
 
 ![image](https://github.com/user-attachments/assets/2315cb07-51bd-4cbf-a0a3-b63553bedf94)
 
+## Builds
+En aquest apartat pots consultar les execucions i el detall de cadascuna d'elles.
+![image](https://github.com/user-attachments/assets/cafa7254-88c9-4492-b093-c170f54f26cb)
 
