@@ -8,7 +8,7 @@ Aquí tens un exemple [https://github.com/surikata3k/calc_python](https://github
 
 ## Crear el repositori a GitHub
 El segon pas és crear el repositori a GitHub i pujar-hi el codi.
-Res que el repositori sigui públic.
+Fes que el repositori sigui públic.
 
 ## Ara ja podem automatitzar la compilació, per aixó:
 Crea un projecte nou a jenkins
