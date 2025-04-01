@@ -37,3 +37,7 @@ docker run -p 8080:8080 -p 50000:50000 --restart=on-failure -v jenkins_home:/var
 docker run -i -t --rm ubuntu:latest /bin/bash
 ```
 
+MeTube
+```
+docker run -d -p 8081:8081 -v .:/downloads ghcr.io/alexta69/metube
+```
