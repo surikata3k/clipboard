@@ -51,6 +51,11 @@ Docker run you image
 docker run -dp 0.0.0.0:3000:3000 YOUR-USER-NAME/getting-started
 ```
 
+Docker rm all containers
+```
+sudo docker rm --force $(sudo docker ps -q)
+```
+
 ## Volume
 Create a volume
 ```
