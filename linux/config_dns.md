@@ -33,3 +33,8 @@ host www.amazon.es
 dig www.amazon.es
 nslookup www.amazon.es
 ```
+
+# View systemd-resolved DNSs
+```
+cat /run/systemd/resolve/resolv.conf
+```
