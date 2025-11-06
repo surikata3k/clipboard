@@ -7,10 +7,10 @@ ssh_dir = os.path.expanduser("~/.ssh")
 pubkey_files = glob.glob(os.path.join(ssh_dir, "*.pub"))
 
 if not pubkey_files:
-    raise FileNotFoundError("❌ No se encontró ninguna clave pública en ~/.ssh/")
+    raise FileNotFoundError("No se encontró ninguna clave pública en ~/.ssh/")
 
 # Mostrar claves encontradas
-print("🔑 Claves públicas encontradas:")
+print("Claves públicas encontradas:")
 for i, path in enumerate(pubkey_files):
     print(f"{i + 1}. {os.path.basename(path)}")
 
@@ -20,7 +20,7 @@ try:
     selected_index = int(choice) - 1 if choice else 0
     selected_key_path = pubkey_files[selected_index]
 except (ValueError, IndexError):
-    raise ValueError("❌ Selección inválida.")
+    raise ValueError("Selección inválida.")
 
 # Leer la clave pública
 with open(selected_key_path, 'r') as f:
@@ -39,6 +39,6 @@ ssh_command = (
 # Ejecutar el comando
 try:
     subprocess.run(ssh_command, shell=True, check=True)
-    print(f"✅ Clave {os.path.basename(selected_key_path)} añadida correctamente al servidor remoto.")
+    print(f"Clave {os.path.basename(selected_key_path)} añadida correctamente al servidor remoto.")
 except subprocess.CalledProcessError as e:
-    print(f"❌ Error al ejecutar el comando SSH: {e}")
+    print(f"Error al ejecutar el comando SSH: {e}")
