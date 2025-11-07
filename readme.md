@@ -1,4 +1,4 @@
 ### Surikata3k Clipboard
 This repository is a collection of tips.
 
-[links.md](Links)
+[links](links.md)
