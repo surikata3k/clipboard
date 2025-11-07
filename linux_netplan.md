@@ -1,3 +1,9 @@
+# Linux Netplan
+
+## Static
+netplanl-static-ip.yaml
+
+```
 network:
   version: 2
   renderer: networkd
@@ -15,3 +21,4 @@ network:
         addresses:
           - 8.8.8.8
           - 8.8.4.4
+```
