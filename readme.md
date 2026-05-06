@@ -1,6 +1,8 @@
 ### Surikata3k Clipboard
 This repository is a collection of tips and notes.
 
+## Apps
+(https://windirstat.net/) - Windirstat: Windows Directory Statistics
 
 ## Links
 
